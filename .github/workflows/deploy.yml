@@ -19,7 +19,7 @@ jobs:
       - name: Check Azure CLI
         run: |
          az --version
-         continue-on-error: true
+        continue-on-error: true
 
       - name: Install Azure CLI
         if: ${{ failure() }}
