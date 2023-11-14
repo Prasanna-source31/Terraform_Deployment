@@ -18,12 +18,13 @@ jobs:
       - name: Check Azure CLI
         run: |
          az --version
-         continue-on-error: true
+         ignore_errors: true
 
       - name: Install Azure CLI
         if: ${{ failure() }}
         run: |
           curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
 
 
       - name: Setup Terraform
