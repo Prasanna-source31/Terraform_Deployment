@@ -20,8 +20,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: 0.15.0
-      - name: Install Azure CLI
-        uses: azure/setup-azure-cli@v1
+      
       - name: Login to Azure
         uses: azure/login@v1
         with:
